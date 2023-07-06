@@ -1,5 +1,3 @@
 #!/bin/bash
 
-ls /tmp/my_first_directory/
-
-rm -rf betty
+rm /tmp/my_first_directory/betty
