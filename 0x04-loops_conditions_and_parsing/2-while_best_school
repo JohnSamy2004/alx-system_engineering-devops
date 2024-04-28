@@ -5,4 +5,5 @@ l=0
 while [$l -le 10]
 do
 	echo "Best School"
+	l=$(( l++ ))
 done 
