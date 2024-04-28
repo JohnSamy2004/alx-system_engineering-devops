@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #Using while loop
 
-l = 0
-while [ $l -le 10 ]
+l=0
+while [$l -le 10]
 do
 	echo "Best School"
 done 
