@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#Using if and elif and else in a while loop
+#Enjoy :)
+
+i=0
+while [ $i -lt 10 ]
+do
+	if [[ $i == 4]]; then
+		echo "bad luck"
+	elif [[ $i == 8]]; then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+
+	i=$(( i+1 ))
+done
