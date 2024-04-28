@@ -2,7 +2,7 @@
 #Using if and elif and else in a while loop
 #Enjoy :)
 
-i=0
+i=1
 while [ $i -lt 10 ]
 do
 	if [[ $i == 4]]; then
