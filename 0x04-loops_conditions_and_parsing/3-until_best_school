@@ -5,5 +5,5 @@ l=0
 until [ $l -ge 10 ]
 do
 	echo "Best School"
-	l=$(( -l+1 ))
+	l=$(( l+1 ))
 done
