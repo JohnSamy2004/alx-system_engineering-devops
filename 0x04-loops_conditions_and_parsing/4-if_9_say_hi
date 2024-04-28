@@ -3,9 +3,9 @@
 #if 9 say hi ;)
 
 i=0
-while [ $i -lt 10 ]
+while [ $i -le 10 ]
 do
-	if [[ $i == 8 ]]; then
+	if [[ $i == 9 ]]; then
 		echo "Hi"
 	else
 		echo "Best School"
