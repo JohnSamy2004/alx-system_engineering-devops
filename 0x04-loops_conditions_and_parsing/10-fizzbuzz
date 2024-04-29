@@ -7,7 +7,7 @@ do
 		echo "Fizz"
 	elif (( i % 5 == 0)); then
 		echo "Buzz"
-	elif (( i % 15 == 0)); then
+	elif (( i % 5 == 0 && i % 3 == 0)); then
 		echo "FizzBuzz"
 	else
 		echo "$i"
