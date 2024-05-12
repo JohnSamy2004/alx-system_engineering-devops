@@ -1,2 +1,2 @@
 #!/usr/bin/env ruby
-puts ARGV[0].match(/\b[^a-z]+\b/)
+puts ARGV[0].scan(/\b[^a-z]+\b/).join
