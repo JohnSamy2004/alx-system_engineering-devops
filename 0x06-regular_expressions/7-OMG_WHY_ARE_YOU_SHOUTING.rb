@@ -1,2 +1,2 @@
 #!/usr/bin/env ruby
-puts ARGV[0].match(/\b[A-Z]\b/)
+puts ARGV[0].match(/[^a-z]/)
