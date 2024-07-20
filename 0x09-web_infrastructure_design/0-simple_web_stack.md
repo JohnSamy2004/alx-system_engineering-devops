@@ -4,8 +4,6 @@
 
 ![Simple Web Stack](https://raw.githubusercontent.com/JohnSamy2004/alx-system_engineering-devops/master/0x09-web_infrastructure_design/0-simple_web_stack.jpg)
 
-## Visit Board
-[www.foobar.com](http://www.foobar.com)
 
 ## Description
 
