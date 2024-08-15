@@ -12,8 +12,9 @@ def number_of_subscribers(subreddit):
     }
     r = requests.get('https://www.reddit.com/r/{:}/about.json'.format(
         subreddit), headers=headers, allow_redirects=False)
-    if r.status_code >= 300:
+    if r.status_code in [301, 404]:
         return 0
+    r.raise_for_status()
     json = r.json()
     data_dict = json.get('data')
     return(data_dict.get('subscribers'))
