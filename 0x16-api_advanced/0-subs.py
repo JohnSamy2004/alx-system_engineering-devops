@@ -1,27 +1,19 @@
 #!/usr/bin/python3
+"""Module to query the number of subscribers of a given Reddit subreddit."""
 import requests
 
+
 def number_of_subscribers(subreddit):
-    # Define the URL for the subreddit's about.json endpoint
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    
-    # Set up the headers with a custom User-Agent
-    headers = {'User-Agent': 'myRedditApp/0.1'}
+    """Returns the total number of subscribers for a given subreddit."""
+    base_url = f"https://www.reddit.com/r/{subreddit}/about.json"
+    headers = {
+        "User-Agent": "python:api.subscriber.counter:v1.0.0 (by /u/your_username)"
+    }
     
     try:
-        # Make a GET request to the Reddit API
-        response = requests.get(url, headers=headers, allow_redirects=False)
-        
-        # Check if the response is valid (status code 200)
-        if response.status_code == 200:
-            # Parse the JSON response
-            data = response.json()
-            # Return the number of subscribers
-            return data['data']['subscribers']
-        else:
-            # If the subreddit does not exist or other error occurred, return 0
-            return 0
-    
+        response = requests.get(base_url, headers=headers, allow_redirects=False)
+        response.raise_for_status()
+        data = response.json().get("data", {})
+        return data.get("subscribers", 0)
     except requests.RequestException:
-        # Handle any request exceptions and return 0
         return 0
