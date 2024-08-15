@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Module to query the number of subscribers of a given Reddit subreddit."""
+
 import requests
+
 
 def number_of_subscribers(subreddit):
     """Return the total number of subscribers on a given subreddit.
@@ -13,7 +15,7 @@ def number_of_subscribers(subreddit):
     """
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
     headers = {
-        "User-Agent": "python:api.subscriber.counter:v1.0.0 (by /u/Virtual-Tap-6806 )"
+        "User-Agent": "python:api.subscriber.counter:v1.0.0 (by /u/Virtual-Tap-6806)"
     }
 
     try:
@@ -32,6 +34,7 @@ def number_of_subscribers(subreddit):
         # Return the number of subscribers, defaulting to 0 if not present
         return data.get("subscribers", 0)
     
-    except requests.RequestException:
-        # Handle any request-related errors
+    except requests.RequestException as e:
+        # Print the exception if needed for debugging
+        print(f"An error occurred: {e}")
         return 0
