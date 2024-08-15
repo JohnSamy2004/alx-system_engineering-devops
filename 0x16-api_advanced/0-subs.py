@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import requests
 
 def number_of_subscribers(subreddit):
@@ -24,4 +25,3 @@ def number_of_subscribers(subreddit):
     except requests.RequestException:
         # Handle any request exceptions and return 0
         return 0
-
